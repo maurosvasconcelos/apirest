@@ -21,7 +21,6 @@ public class VoluntarioJpaDAO {
 		}
 		return instance;
 	}
-
 	public static void setInstance(VoluntarioJpaDAO instance) {
 		VoluntarioJpaDAO.instance = instance;
 	}
@@ -33,13 +32,10 @@ public class VoluntarioJpaDAO {
 		}
 		return entityManager;
 	}
-
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
-
 	public Voluntario consultaPorId(long id) {
 		return getEntityManager().find(Voluntario.class, id);
 	}
-
 }
